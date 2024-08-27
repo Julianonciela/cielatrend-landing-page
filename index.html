@@ -3,146 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CielaTrend - Global E-Commerce & Culinary Excellence</title>
+    <title>CielaTrend - Global Expertise in E-commerce and Culinary Innovation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-        body { 
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f3f4f6 0%, #dbeafe 100%);
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #081429;
+            color: #ffffff;
         }
-        .bg-blur {
+        .gradient-bg {
+            background: linear-gradient(135deg, #0a1d3b 0%, #0c4a6e 100%);
+        }
+        .nav-link, .button {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover, .button:hover {
+            transform: translateY(-2px);
+        }
+        .section-title {
+            background: linear-gradient(90deg, #3b82f6, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card {
             backdrop-filter: blur(10px);
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
-<body>
-    <div class="bg-gold-500 text-navy-900 py-2 text-center">
-        <p class="font-semibold">This is a temporary page. Our full website is coming soon!</p>
-    </div>
-    <div class="min-h-screen flex flex-col">
-        <header class="bg-navy-900 bg-opacity-90 text-white py-6 sticky top-0 z-50">
-            <div class="container mx-auto px-4 flex justify-between items-center">
+<body class="min-h-screen">
+    <nav class="fixed w-full z-50 bg-opacity-90 bg-blue-900 backdrop-filter backdrop-blur-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
-                    <img src="/api/placeholder/50/50" alt="CielaTrend Logo" class="mr-4 rounded-full">
-                    <h1 class="text-3xl font-bold">CielaTrend</h1>
+                    <img src="https://i.imgur.com/LERTzPy.jpeg" alt="CielaTrend Logo" class="h-10 w-auto">
                 </div>
-                <nav>
-                    <a href="#about" class="text-white hover:text-gold-500 mx-2 transition duration-300">About</a>
-                    <a href="#services" class="text-white hover:text-gold-500 mx-2 transition duration-300">Services</a>
-                    <a href="#shop-now" class="text-white hover:text-gold-500 mx-2 transition duration-300">Shop</a>
-                    <a href="#contact" class="text-white hover:text-gold-500 mx-2 transition duration-300">Contact</a>
-                </nav>
-            </div>
-        </header>
-
-        <main class="flex-grow container mx-auto px-4 py-8">
-            <section id="hero" class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl font-bold text-navy-900 mb-4">Elevating Global Commerce & Culinary Artistry</h2>
-                <p class="text-xl text-gray-600 mb-8">From Michelin-starred kitchens to cutting-edge e-commerce solutions - Your visionary partner in taste and innovation</p>
-                <a href="#contact" class="bg-gold-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-gold-600 transition duration-300 transform hover:scale-105">Discover Our Expertise</a>
-            </section>
-
-            <section id="about" class="mb-16" data-aos="fade-right">
-                <h3 class="text-2xl font-bold text-navy-900 mb-4">About Juliano Incorvaia</h3>
-                <div class="bg-blur shadow-lg rounded-lg p-6">
-                    <p class="mb-4">With over 25 years of experience spanning haute cuisine, international business, and e-commerce innovation, Juliano Incorvaia brings a unique blend of expertise to every venture.</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Master of French, Italian, and Fusion Gastronomy</li>
-                        <li>E-Commerce Visionary & Global Business Strategist</li>
-                        <li>Trendsetting Product Curator & MLM Innovator</li>
-                        <li>Bridging Cultures: France, Italy, Germany, USA, and Asia</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="services" class="mb-16">
-                <h3 class="text-2xl font-bold text-navy-900 mb-4">Our Services</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-blur shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in">
-                        <i class="fas fa-utensils text-4xl text-gold-500 mb-4"></i>
-                        <h4 class="text-xl font-semibold mb-2">Culinary Consulting</h4>
-                        <p>Elevate your restaurant with expert guidance in menu development, staff training, and operational efficiency.</p>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Services</a>
+                        <a href="#experience" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Experience</a>
+                        <a href="#shop" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Shop</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                     </div>
-                    <div class="bg-blur shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
-                        <i class="fas fa-shopping-cart text-4xl text-gold-500 mb-4"></i>
-                        <h4 class="text-xl font-semibold mb-2">E-Commerce Solutions</h4>
-                        <p>Transform your online presence with cutting-edge e-commerce strategies and implementation.</p>
-                    </div>
-                    <div class="bg-blur shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
-                        <i class="fas fa-globe text-4xl text-gold-500 mb-4"></i>
-                        <h4 class="text-xl font-semibold mb-2">International Business Development</h4>
-                        <p>Expand your reach globally with our expertise in cross-cultural business practices and networking.</p>
-                    </div>
-                    <div class="bg-blur shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105" data-aos="zoom-in" data-aos-delay="300">
-                        <i class="fas fa-gifts text-4xl text-gold-500 mb-4"></i>
-                        <h4 class="text-xl font-semibold mb-2">Trendsetting Products</h4>
-                        <p>Access a curated selection of innovative products for your family and business needs.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="shop-now" class="mb-16" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-navy-900 mb-4">Shop Our Products Now!</h3>
-                <div class="bg-blur shadow-lg rounded-lg p-6">
-                    <p class="mb-4">While our website is under construction, you can still purchase our first articles with special discounts through the following platforms:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <a href="https://wa.me/+16613482181" target="_blank" class="bg-green-500 text-white py-2 px-4 rounded-full text-center hover:bg-green-600 transition duration-300 transform hover:scale-105">
-                            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Shop
-                        </a>
-                        <a href="https://offerup.com/your-profile" target="_blank" class="bg-blue-500 text-white py-2 px-4 rounded-full text-center hover:bg-blue-600 transition duration-300 transform hover:scale-105">
-                            <i class="fas fa-tag mr-2"></i>OfferUp
-                        </a>
-                        <a href="https://www.facebook.com/marketplace/your-profile" target="_blank" class="bg-blue-700 text-white py-2 px-4 rounded-full text-center hover:bg-blue-800 transition duration-300 transform hover:scale-105">
-                            <i class="fab fa-facebook-f mr-2"></i>Facebook Marketplace
-                        </a>
-                    </div>
-                    <p class="mt-4 text-sm text-gray-600">*Limited time offers. Discounts available on select items.</p>
-                </div>
-            </section>
-
-            <section id="contact" class="mb-16" data-aos="fade-up">
-                <h3 class="text-2xl font-bold text-navy-900 mb-4">Contact Us</h3>
-                <div class="bg-blur shadow-lg rounded-lg p-6">
-                    <form>
-                        <div class="mb-4">
-                            <label for="name" class="block text-gray-700 mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="message" class="block text-gray-700 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gold-500" required></textarea>
-                        </div>
-                        <button type="submit" class="bg-navy-900 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-navy-800 transition duration-300 transform hover:scale-105">Send Message</button>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <footer class="bg-navy-900 bg-opacity-90 text-white py-6">
-            <div class="container mx-auto px-4 text-center">
-                <p>&copy; 2024 CielaTrend. All rights reserved.</p>
-                <div class="mt-4">
-                    <a href="#" class="text-white hover:text-gold-500 mx-2 transition duration-300"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="text-white hover:text-gold-500 mx-2 transition duration-300"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="text-white hover:text-gold-500 mx-2 transition duration-300"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-        </footer>
-    </div>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-        });
-    </script>
-</body>
-</html>
+        </div>
+    </nav>
+
+    <header class="gradient-bg pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4" data-aos="fade-up">Global Expertise in E-commerce and Culinary Innovation</h1>
+            <p class="text-xl mb-8" data-aos="fade-up" data-aos-delay="200">Bringing European Excellence to Bakersfield, CA</p>
+            <a href="#contact" class="button bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full" data-aos="fade-up" data-aos-delay="400">Start Your Global Journey</a>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <section id="about" class="mb-16">
+            <h2 class="section-title text-4xl font-bold mb-6" data-aos="fade-right">About Juliano Incorvaia</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <p class="mb-4">Born and raised at the Franco-German border to an Italian father and a German mother, I embody the essence of European excellence. My journey led me to Switzerland, the epitome of professional quality, where I collaborated with renowned chefs and industry leaders, honing my skills in gastronomy and business.</p>
+                    <p class="mb-4">With over 20 years of experience across 4 continents, I bring a unique blend of culinary innovation, international business acumen, and a commitment to the highest standards of quality and respect for products and people.</p>
+                    <p class="mb-4">Now based in Bakersfield, CA, I'm excited to contribute my expertise to your projects, planting seeds of knowledge that will grow into stable, prosperous ventures. Don't miss this incredible opportunity to work with a true global expert right here in California!</p>
+                    <a href="#contact" class="button bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-4 inline-block">Ready to elevate your business? Let's connect!</a>
+                </div>
+                <div class="flex justify-center items-center" data-aos="fade-left" data-aos-delay="400">
+                    <img src="/api/placeholder/400/300" alt="Juliano Incorvaia" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose" class="mb-16">
+            <h2 class="section-title text-3xl font-bold mb-6" data-aos="fade-up">Why Choose Juliano?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-globe text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">International Expertise</h3>
+                    <p>Leverage my experience across Europe, Asia, and the Americas to give your business a global edge.</p>
+                </div>
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="400">
+                    <i class="fas fa-utensils text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Culinary Innovation</h3>
+                    <p>Benefit from my background in high-end gastronomy to revolutionize your food-related ventures.</p>
+                </div>
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="600">
+                    <i class="fas fa-handshake text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Cultural Bridge</h3>
+                    <p>Utilize my multicultural background to navigate complex international markets with ease.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="mb-16">
+            <h2 class="section-title text-3xl font-bold mb-6" data-aos="fade-up">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="200">
+                    <i class="fas fa-store text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">E-commerce Consulting</h3>
+                    <p>Optimize your online presence and boost sales with our tailored e-commerce strategies.</p>
+                </div>
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="400">
+                    <i class="fas fa-globe-americas text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Global Expansion Services</h3>
+                    <p>Expand your business into European and Asian markets with our expert guidance and local insights.</p>
+                </div>
+                <div class="card p-6 rounded-lg" data-aos="flip-left" data-aos-delay="600">
+                    <i class="fas fa-lightbulb text-4xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Innovation
