@@ -236,37 +236,27 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-3xl font-bold mb-8 text-center text-gradient" data-aos="fade-up">
-                    Contact Us
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="card p-6 rounded-lg" data-aos="fade-right">
-                        <h3 class="text-xl font-semibold mb-4 text-[#64ffda]">Our Information</h3>
-                        <p><i class="fas fa-map-marker-alt mr-2 text-[#64ffda]"></i>801 Taylor Street, Bakersfield, CA 93309</p>
-                        <p><i class="fas fa-phone mr-2 text-[#64ffda]"></i>(661) 348-2181</p>
-                        <p><i class="fas fa-envelope mr-2 text-[#64ffda]"></i>contact@cielatrend.com</p>
-                    </div>
-                    <div class="card p-6 rounded-lg" data-aos="fade-left">
-                        <h3 class="text-xl font-semibold mb-4 text-[#64ffda]">Send Us a Message</h3>
-                        <form>
-                            <div class="mb-4">
-                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-md bg-[#0a192f] border border-[#64ffda] focus:outline-none focus:border-[#00bfa5]">
-                            </div>
-                            <div class="mb-4">
-                                <input type="email" placeholder="Your Email" class="w-full px-4 py-2 rounded-md bg-[#0a192f] border border-[#64ffda] focus:outline-none focus:border-[#00bfa5]">
-                            </div>
-                            <div class="mb-4">
-                                <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-2 rounded-md bg-[#0a192f] border border-[#64ffda] focus:outline-none focus:border-[#00bfa5]"></textarea>
-                            </div>
-                            <button type="submit" class="w-full bg-[#64ffda] hover:bg-[#00bfa5] text-[#0a192f] font-bold py-2 px-4 rounded-full transition duration-300">
-                                Send
-                            </button>
-                        </form>
-                    </div>
+        <section id="contact" class="mb-16">
+            <h2 class="section-title text-3xl font-bold mb-6" data-aos="fade-up">Contact Us</h2>
+            <form 
+            form
+  action="https://formspree.io/f/xgvwdaqe"
+  method="POST"
+  class="max-w-lg mx-auto" data-aos="fade-up" data-aos-delay="200">
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-3 py-2 bg-white bg-opacity-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
                 </div>
-            </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 bg-white bg-opacity-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 bg-white bg-opacity-10 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"></textarea>
+                </div>
+                <button type="submit" class="button w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full">Send</button>
+            </form>
         </section>
     </main>
 
